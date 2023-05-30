@@ -1,7 +1,7 @@
 :root {
     /* Color */
-    --primary-text-color: #303030;
-    --secondary-text-color: #ffffff;
+    --primary-color: #303030;
+    --secondary-color: #ffffff;
     --accent-color: #FF6C00;
 }
 
@@ -33,6 +33,10 @@ ul,
 ol {
     padding: 0;
     margin: 0;
+}
+
+a:visited {
+    color: currentColor;
 }
 
 .link {
@@ -121,12 +125,12 @@ ol {
 }
 
 .header-logo {
-    fill: var(--secondary-text-color);
+    fill: var(--secondary-color);
 }
 
 @media only screen and (min-width: 768px) {
     .header-logo {
-        fill: var(--primary-text-color);
+        fill: var(--primary-color);
     }
 }
 
@@ -166,7 +170,7 @@ ol {
 }
 
 .menu-burger-icon {
-    fill: var(--secondary-text-color);
+    fill: var(--secondary-color);
 }
 
 .menu-container {
@@ -175,8 +179,8 @@ ol {
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
-    background-color: #3f51b5;
+    padding: 40px;
+    background-color: var(--secondary-color);
     z-index: 999;
 
     transform: translateX(100%);
@@ -189,15 +193,72 @@ ol {
 
 .menu-container .menu-toggle {
     position: absolute;
-    top: 16px;
-    right: 16px;
-    color: #fff;
+    top: 60px;
+    right: 40px;
 }
 
 
-.mobile-menu .link {
+.mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-top: 78px;
+    margin-bottom: 64px;
+}
+
+.mobile-menu-item,
+.mobile-menu-tel {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.38;
+    letter-spacing: 0.1em;
+    color: var(--primary-color);
+}
+
+.mobile-menu-tel {
     display: block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
+    margin-bottom: 24px;
+}
+
+.mobile-menu-btn {
+    display: block;
+    min-width: 194px;
+    height: 40px;
+    padding: 12px 37px;
+    margin-bottom: 64px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+
+
+.mobile-menu-social-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.mobile-menu-social-list::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 60px;
+    background-color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.mobile-menu-social-item {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.2em;
+    color: var(--primary-color);
 }
