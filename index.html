@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Normalize -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
+    <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Fonts styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,11 +24,12 @@
     <!--======= HEADER =======-->
     <header class="page-header">
       <div class="header-container container">
-        <a calss="header-logo-link link" href="index.html">
+        <a class="header-logo-link link" href="index.html">
           <svg class="header-logo" width="70" height="56">
             <use href="./images/icons.svg#logo"></use>
           </svg>
         </a>
+
         <button
           class="menu-toggle js-open-menu"
           aria-expanded="false"
@@ -35,6 +39,23 @@
             <use href="./images/icons.svg#menu"></use>
           </svg>
         </button>
+
+        <nav class="page-nav">
+          <ul class="header-nav-list list">
+            <li class="header-nav-item"><a href="" class="link">About</a></li>
+            <li class="header-nav-item">
+              <a href="" class="link">Services and prices</a>
+            </li>
+            <li class="header-nav-item"><a href="" class="link">Barbers</a></li>
+            <li class="header-nav-item">
+              <a href="" class="link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header-contact link" href="tel:+380441111111"
+          >+38 044 111 11 11</a
+        >
+        <button class="header-btn" type="button">Online-booking</button>
       </div>
     </header>
     <main>
